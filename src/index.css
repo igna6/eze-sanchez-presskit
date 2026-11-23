@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Cambiamos la tipografía a una que soporte pesos masivos como Impact, Arial Black o System sans-serif pesado */
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizada para acompañar la estética */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22d3ee;
+  /* cyan-400 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+  /* cyan-600 */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/NeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
