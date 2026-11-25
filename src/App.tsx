@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X, Menu, FolderOpen, ArrowUpRight } from 'lucide-react';
 import { BookingCalendar } from './components/BookingCalendar';
